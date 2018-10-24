@@ -9,5 +9,8 @@
     left: 0;
     font-size: 40px;
     color: whitesmoke;
+}
 
+body {
+    margin: 0;
 }
