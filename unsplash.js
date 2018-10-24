@@ -27,13 +27,11 @@ var unsplash = new Vue({
 
         fetchQuote() {
 
-            var api_key = "get this"
-
-            fetch(`https://api.somequotegenerator or make own`)
+            fetch(`http://localhost:3000/`)
             .then(response => response.ok ? response.json() : Promise.reject(response))
             .then(results => {
-
-                this.quoteSrc = "get this"
+                console.log(results)
+                this.quoteSrc = results.quote
                 console.log("we got a quote...maybe!")
             })
         }
@@ -43,6 +41,7 @@ var unsplash = new Vue({
 
     created() {
         this.fetchGif()
+        this.fetchQuote()
 
     }
 
