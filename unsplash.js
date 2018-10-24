@@ -1,4 +1,3 @@
-console.log("test")
 var unsplash = new Vue({
     el: '#mount-point',
     data() {

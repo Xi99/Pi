@@ -1,0 +1,13 @@
+.bfgImage {
+    height: 100vh;
+    width: 100vh;
+}
+
+.quote {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    color: whitesmoke;
+
+}
