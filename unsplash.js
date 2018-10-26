@@ -31,7 +31,8 @@ var unsplash = new Vue({
             .then(response => response.ok ? response.json() : Promise.reject(response))
             .then(results => {
                 console.log(results)
-                this.quoteSrc = results.quote
+                
+                this.quoteSrc = results.rand
                 console.log("we got a quote...maybe!")
             })
         }
