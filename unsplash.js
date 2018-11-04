@@ -4,7 +4,8 @@ var unsplash = new Vue({
         return {
             imgSrc: null,
             quoteSrc: null,
-
+            tagValue: null,
+            searchQuery: null,
         };
     },
     methods: {
@@ -14,12 +15,14 @@ var unsplash = new Vue({
 
             var secret_key = "8cbbf641ec65777938e3cc224f43c8a8c7fac78897a27b43dbe336b7310a7f99"
             
+            /* var searchQuery = document.getElementById("userInput");
 
+            var tag = searchQuery.value; This was causing the page to not load properly*/
 
-            fetch(`https://api.unsplash.com/photos/random?client_id=${api_key}`)
+            fetch(`https://api.unsplash.com/photos/random?query=mountains&client_id=${api_key}`)
             .then(response => response.ok ? response.json() : Promise.reject(response))
             .then(results => {
-
+                console.log(results);
                 this.imgSrc = results.urls.regular
                 console.log("we received a response!")
             })
@@ -33,9 +36,9 @@ var unsplash = new Vue({
                 console.log(results)
                 
                 this.quoteSrc = results.rand
-                console.log("we got a quote...maybe!")
+                console.log("we got a quote!")
             })
-        }
+        },
 
 
     },
